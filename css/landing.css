@@ -1,0 +1,163 @@
+.container{
+    position: absolute;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    z-index: -5;
+}
+.levelzero{
+    height: 100vh;
+    position: relative;
+    top: 10px;
+    left: -10vw;
+    width: 100vw;
+    min-width: 1985px;
+    
+}
+.levelone{
+    margin-left: -70px;
+    margin-top: -20px;
+    
+}
+.leveltwo{
+    -webkit-animation: float 10s linear infinite;
+}
+.levelthree{
+    -webkit-animation: float 6s linear alternate infinite;
+}
+.levelthreethree{
+    -webkit-animation: float 13s linear infinite;
+}
+.levelfour{
+    -webkit-animation: float 8s linear alternate infinite;
+}
+ul{
+    margin: 0;
+    height: 500px;
+}
+li{
+    margin: 0;
+}
+.scene{
+    padding: 0;
+}
+.layer{
+    position: absolute;
+}
+expand-width{}
+
+.layer:nth-child(1) {
+  opacity: 0.15;
+}
+.layer:nth-child(2) {
+  opacity: 0.30;
+}
+.layer:nth-child(3) {
+  opacity: 0.45;
+}
+.layer:nth-child(4) {
+  opacity: 0.60;
+}
+.layer:nth-child(5) {
+  opacity: 0.75;
+}
+.layer:nth-child(6) {
+  opacity: .80;
+    
+}
+
+
+.large-corner{
+    height: 100vh;
+    position: absolute;
+    bottom: -10px;
+    right: -20px;
+    width: 100vw;
+    min-width: 1985px;
+    display: none;
+    z-index: -5;
+}
+.landing-logo{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 250px;
+    z-index: 5;
+}
+.alpha{
+    display: block;
+    margin: 0 auto;
+    animation: alpha-shrink 12s infinite;
+    -webkit-animation: alpha-shrink 12s infinite;
+    width: 105%;
+}
+
+
+
+
+
+
+@media (min-width: 1770px){
+    .large-corner{
+        display: block;
+}
+    .levelzero{
+        display: none;
+    }
+}
+@media (max-width: 1600px){
+    .levelthreethree{
+        margin-left: -25%;
+    }
+    .levelfour{
+        margin-left: -25%;
+    }
+}
+@media (max-width: 1111px){
+    .levelthreethree{
+        margin-left: -35%;
+    }
+    .levelfour{
+        margin-left: -35%;
+    }
+}
+@media (max-width: 850px){
+   .levelthreethree{
+        margin-left: -45%;
+    }
+    .levelfour{
+        margin-left: -45%;
+    } 
+    .levelzero{
+        margin-left: -15%
+    }
+}
+@media (max-width: 500px){
+    .leveltwo{
+        margin-left: -10%;
+    }
+    .levelthree{
+        margin-left: -10%;
+    } 
+    .levelzero{
+        margin-left: -30%
+    }
+    .landing-main{
+        width: 80%
+    }
+    menu{
+        flex-direction: column;
+        width: 100%;
+        margin-top: 40px
+    }
+    menuitem{
+        width: 100%;
+    }
+}
+
+
+
+
+/*
+#D53531

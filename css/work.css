@@ -1,0 +1,477 @@
+body{
+    overflow: hidden;
+}
+header{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 700px;
+    z-index: 20;
+    position: fixed;
+    left: 50px;
+    
+}
+.header-logo{
+    width: 250px;
+}
+.alpha{
+    display: block;
+    margin: 0 auto;
+    animation: beta-shrink 12s infinite;
+    -webkit-animation: beta-shrink 12s infinite;
+    
+}
+@keyframes beta-shrink {
+    0%{width: 35%; transform: translateY(0);}
+    10%{width: 0%; transform: translateY(-5%);}
+    60%{width: 0%; transform: translateY(-5%);}
+    65%{width: 35%; transform: translateY(0);}
+    100%{width: 35%;transform: translateY(0);}
+}
+@-webkit-keyframes beta-shrink {
+    0%{width: 35%; transform: translateY(0);}
+    10%{width: 0%; transform: translateY(-5%);}
+    60%{width: 0%; transform: translateY(-5%);}
+    65%{width: 35%; transform: translateY(0);}
+    100%{width: 35%;transform: translateY(0);}
+}
+
+menu{
+    margin-top: 0;
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+}
+menuitem{
+    font-size: 30px;
+    width: 100%;
+    max-width: 185px;
+}
+menuitem div{
+    padding: 10px 15px 10px 15px;
+}
+menuitem div:hover{
+    color: #D53531;
+    border: 2.3px solid #ccc;
+    background-color: #ccc;
+    
+}
+.worklink{ 
+    opacity: .4;
+}
+
+
+
+main{
+    width: 100%;
+    height: 10px;
+    background-color: white;
+}
+
+#categories{
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    z-index: 10;
+}
+.hexagon{
+    width: 1200px;
+}
+.hexagon div{
+    transition: all .4s;
+    padding-bottom: 110%;
+    height: 0;
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center center;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.hexagon div:hover{
+    transition: all .4s;
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    cursor: pointer;
+}
+h2{
+    font-size: 100px;
+    position: absolute;
+    z-index: 6;
+}
+.web{
+    top: -250px;
+    left: -320px;
+    position: absolute;
+}
+.web h2{
+    left: 650px;
+    top: 1100px;
+    transform: rotate(-29deg);
+    color: #fff;
+}
+.print{
+    position: relative;
+    left: 920px;
+    top: -250px;
+}
+.print h2{
+    left: 60px;
+    top: 920px;
+    transform: rotate(29deg);
+    color: #fff;
+}
+.process{
+    position: relative;
+    left: 300px;
+    top: -550px;
+    
+}
+.process h2{
+    left: 240px;
+    top: 90px;
+    transform: rotate(-29deg);
+    color: #fff;
+}
+#web{
+    background-color: #D53531;
+    background-image: url('http://geizerdesign.com/images/web-page_background.jpg');
+}
+#print{
+    background-color: #D53531;
+    /*background-image: url('http://geizerdesign.com/images/print-page_background.jpg');*/
+}
+#process{
+    background-color: #D53531;
+    /*background-image: url('http://lorempixel.com/500/200');*/
+}
+
+#viewport{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -20;
+}
+
+
+
+
+
+
+
+.web-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #D53531;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+.print-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #D53531;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.back-button{
+    position: absolute;
+    width: 900px;
+    height: 300px;
+    background-color: #ccc;
+    z-index: 6;
+    transition: 0.3s ease-in-out;
+}
+.back-button:hover{
+    opacity: 1;
+    background: #fff;
+    color: #D53531;
+    cursor: pointer;
+}
+.back-button h2{
+    font-size: 70px;
+    opacity: .5;
+}
+.back-from-web h2{
+    left: 500px;
+    top: 10px;
+}
+.back-from-web{
+    right: -190px;
+    bottom: -190px;
+    transform: rotate(-29deg)
+}
+.back-from-print{
+    left: -190px;
+    bottom: -190px;
+    transform: rotate(29deg)
+}
+.back-from-print h2{
+    left: 200px;
+    top: 10px;
+}
+
+
+.white{
+    background-color: #fff;
+}
+p{
+    font-size: 1em;
+}
+h3{
+   font-size: 30px; 
+    font-weight: normal;
+}
+
+
+.process-container{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 1738px;
+}
+.process-start{
+    width: 100%;
+    margin: 0 auto;
+    z-index: 7;
+    margin-top: -100px;
+}
+.centered-textbox{
+    position: absolute;
+    left: 50%;
+    margin-left: -25%;
+    top: 400px;
+    width: 50%;
+    display: block;
+    text-align: center;
+}
+
+.space1{
+    display: block;
+    margin: 0 auto;
+    margin-top: -711px;
+    height: 50px;
+}
+
+.process-photo1{
+    width: 100%;
+    max-width: 1750px;
+    z-index: -2;
+}
+#process-photo1{
+    z-index: -2;
+    padding-bottom: 120%;
+    height: 0;
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center center;
+    -webkit-clip-path: polygon(0% 0%, 50% 31%, 100% 0%, 100% 100%, 50% 70%, 0% 100%);
+    background-image: url('http://geizerdesign.com/images/web-page_background.jpg');
+}
+
+.space2{
+    display: block;
+    margin: 0 auto;
+    margin-top: -630px;
+    min-height: 700px;
+}
+
+.process-shape1{
+    width: 100%;
+    max-width: 1750px;
+    z-index: -2;
+    margin-top: -2px;
+}
+#process-shape1{
+    z-index: -2;
+    padding-bottom: 38%;
+    height: 0;
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center center;
+    -webkit-clip-path: polygon(0% 0%,  100% 0%,  50% 100%);
+}
+
+.wrapper{
+    z-index: 15;
+    position: relative;
+    width: 100%;
+    max-width: 1738px;
+    margin-top: -70px;
+    
+}
+.process-list{
+    color: #D53531;
+    list-style-type: none;
+    padding: 0;
+    background-color: #fff;
+    margin: 0;
+}
+.process-list li{
+    display: flex;
+}
+.process-list img{
+    margin-right: 10%;
+    margin-left: 12%;
+}
+.process-steps{
+    padding-right: 15%
+}
+
+.process-photo2{
+    margin-top: -1100px;
+    width: 100%;
+    max-width: 1750px;
+    z-index: -2;
+}
+#process-photo2{
+    z-index: -2;
+    padding-bottom: 120%;
+    height: 0;
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center center;
+    -webkit-clip-path: polygon( 50% 31%, 100% 0%, 100% 100%, 50% 70%);
+    background-image: url('http://geizerdesign.com/images/web-page_background.jpg');
+    
+}
+.process-results{
+    position: relative;
+    width: 33%;
+    padding-left: 12%;
+    padding-right: 5%;
+    margin-top: 200px;
+}
+
+.process-lower-logo{
+    margin-top: -100px;
+    
+}
+.process-lower-logo svg{
+    display: block;
+    margin: 0 auto;
+    animation: float 12s infinite;
+    -webkit-animation: float 12s infinite;
+}
+
+
+.process-contact-form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 50vh;
+    padding-top: 5%;
+    width: 100%;
+}
+h4{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: .07em;
+    line-height: 1.7em;
+}
+.process-contact-form div{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 20%;
+    transition: 0.3s ease-in-out;
+    border: 2.3px solid white;
+    font-size: 2em;
+   
+}
+.process-contact-form h2{
+    
+}
+
+.process-contact-form a{
+    width: 50%;
+    max-width: 630px;
+    position: absolute;
+    left: 50%;
+    margin-left: -20%;
+   
+}
+.process-contact-form div:hover{
+    border-radius: 30px;
+    color: #D53531;
+    border: 2.3px solid #D53531;
+    background-color: rgba(255,255,255, .9);
+    cursor: pointer;
+    
+    
+}
+
+
+
+
+
+
+
+.hidden{
+    display: none !important;
+}
+.show{
+   display: block;
+}
+
+
+
+
+
+@media (max-width: 1220px){
+    .process-results{
+        margin-top: 50px;
+    }
+    .process-photo2{
+        margin-top: -830px;
+    }
+}
+@media (max-width: 880px){
+    .process-results{
+        margin-top: -30px;
+    }
+    .process-photo2{
+        margin-top: -740px;
+    }
+}
+@media (max-width: 750px){
+    .process-results{
+        margin-top: -30px;
+    }
+    .process-photo2{
+        margin-top: -800px;
+    }   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+#D53531
