@@ -19,12 +19,12 @@
         <header>
             
             <div class="header-logo">
-                <a href='index.html'><svg class='alpha' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="173.223px" height="200px" viewBox="0 0 173.223 200" style="enable-background:new 0 0 173.223 200;" xml:space="preserve">
+                <a href='index.html'><svg class='alpha' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="173.223px" height="100px" viewBox="0 0 173.223 200" style="enable-background:new 0 0 173.223 200;" xml:space="preserve">
                     <g id="Layer_26">
                         <polygon style="fill:#fff;" points="0,50.001 86.613,0 173.223,50.001 173.223,149.999 86.613,200 0,149.999 	"/>
                     </g>
                 </svg></a>
-                <svg class='beta' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="173.223px" height="200px" viewBox="0 0 173.223 200" style="enable-background:new 0 0 173.223 200;" xml:space="preserve">
+                <svg class='beta' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="173.223px" height="100px" viewBox="0 0 173.223 200" xml:space="preserve">
                     <g id="Layer_26">
                         <polygon style="fill:#fff;" points="0,50.001 86.613,0 173.223,50.001 173.223,149.999 86.613,200 0,149.999 	"/>
                     </g>
@@ -52,7 +52,7 @@
         <main>
             <div id="categories">
                 <div class="hexagon web">
-                    <h2>web</h2><!-- figure out how to scale this  and make them clickable-->
+                    <h2>web</h2>
                     <div id="web"></div>
                 </div>
                 <div class="hexagon print">
@@ -65,14 +65,12 @@
                 </div>
             </div>
             
-            
             <div id="viewport"></div>
+            <div class="web-extension"></div>
             
             <div class="back-button hidden">
                 <h2>back</h2>
             </div>
-            
-
         </main>
 
         <div class='web-container hidden'>
@@ -190,18 +188,15 @@
             });
             
             $(document).on('click', '.beta', function(){
-                $('menu').addClass('menu-position');
-                $('.hover-off').removeClass('hidden');
-                $('.beta').css('background-color', '#ffffff');
+                $('menu').toggleClass('menu-position');
+                $('.hover-off').toggleClass('hidden');
             });
             $(document).on('click', '.hover-off', function(){
                 $('menu').removeClass('menu-position');
                 $('.hover-off').addClass('hidden');
-                $('.beta').css('background-color', 'rgba(1,1,1,0.0)');
             });
             $('.hover-off').hover(function(){
                 $('menu').removeClass('menu-position');
-                $('.beta').css('background-color', 'rgba(1,1,1,0.0)');
                 $('.hover-off').addClass('hidden');
             });
             
@@ -210,38 +205,98 @@
                 $('.back-button').removeClass('hidden');
                 $('.back-button').addClass('back-from-web');
                 $('.web-container').addClass('show');
-                $('.hexagon').addClass('hidden');
+                $('#categories').addClass('hidden');
+                $('.web-extension').addClass('hidden');
                 window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
             });
-            $(document).on('click', '.back-button', function(){
-                $('.web-container').addClass('hidden');
-                $('.back-button').addClass('hidden');
-                $('.back-button').removeClass('back-from-web');
-                $('.web-container').removeClass('show');
-                $('.hexagon').removeClass('hidden');
+            $(document).on('click', '.web > h2', function(){
+                $('.web-container').removeClass('hidden');
+                $('.back-button').removeClass('hidden');
+                $('.back-button').addClass('back-from-web');
+                $('.web-container').addClass('show');
+                $('#categories').addClass('hidden');
+                $('.web-extension').addClass('hidden');
                 window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
-                $('.print-container').addClass('hidden');
-                $('.back-button').removeClass('back-from-print');
-                $('.print-container').removeClass('show');
             });
-            
+            $(document).on('click', '.web-extension', function(){
+                $('.web-container').removeClass('hidden');
+                $('.back-button').removeClass('hidden');
+                $('.back-button').addClass('back-from-web');
+                $('.web-container').addClass('show');
+                $('#categories').addClass('hidden');
+                $('.web-extension').addClass('hidden');
+                window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
+            });
+            $('.web > h2').hover(function(){
+                $('.web > div').toggleClass("active");
+                $('.web-extension').toggleClass("web-extension-active");
+            });
+            $('#web').hover(function(){
+                $('.web-extension').toggleClass("web-extension-active");
+            });
+            $('.web-extension').hover(function(){
+                $('.web > div').toggleClass("active");
+                $('.web-extension').toggleClass("web-extension-active");
+            });
             
             $(document).on('click', '#print', function(){
                 $('.print-container').removeClass('hidden');
                 $('.back-button').removeClass('hidden');
                 $('.back-button').addClass('back-from-print');
                 $('.print-container').addClass('show');
-                $('.hexagon').addClass('hidden');
+                $('#categories').addClass('hidden');
+                $('.web-extension').addClass('hidden');
                 window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
             });
+            $(document).on('click', '.print > h2', function(){
+                $('.print-container').removeClass('hidden');
+                $('.back-button').removeClass('hidden');
+                $('.back-button').addClass('back-from-print');
+                $('.print-container').addClass('show');
+                $('#categories').addClass('hidden');
+                $('.web-extension').addClass('hidden');
+                window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
+            });
+            $('.print > h2').hover(function(){
+                $('.print > div').toggleClass("active");
+            });
+            
+            
             $(document).on('click', '#process', function(){
                 $('.process-container').removeClass('hidden');
                 $('.process-container').addClass('show');
-                $('.hexagon').addClass('hidden');
+                $('#categories').addClass('hidden');
+                $('.web-extension').addClass('hidden');
                 $('body').css('overflowY','scroll');
                 $('header').css('background-color','#D53531');
                 $('body').css('background-color','#D53531');
                 $("#viewport").addClass('hidden');
+            });
+            $(document).on('click', '.process > h2', function(){
+                $('.process-container').removeClass('hidden');
+                $('.process-container').addClass('show');
+                $('#categories').addClass('hidden');
+                $('.web-extension').addClass('hidden');
+                $('body').css('overflowY','scroll');
+                $('header').css('background-color','#D53531');
+                $('body').css('background-color','#D53531');
+                $("#viewport").addClass('hidden');
+            });
+            $('.process > h2').hover(function(){
+                $('.process > div').toggleClass("active");
+            });
+            
+            $(document).on('click', '.back-button', function(){
+                $('.web-container').addClass('hidden');
+                $('.back-button').addClass('hidden');
+                $('.back-button').removeClass('back-from-web');
+                $('.web-container').removeClass('show');
+                $('#categories').removeClass('hidden');
+                $('.web-extension').removeClass('hidden');
+                window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
+                $('.print-container').addClass('hidden');
+                $('.back-button').removeClass('back-from-print');
+                $('.print-container').removeClass('show');
             });
             
             

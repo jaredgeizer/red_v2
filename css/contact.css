@@ -1,8 +1,7 @@
 body{
-    overflow: hidden;
     color: #D53531;
 }
-
+/*this is for the background parallax*/
 .container{
     position: absolute;
     width: 100%;
@@ -48,16 +47,16 @@ li{
 expand-width{}
 
 .layer:nth-child(2) {
-  opacity: 0.30;
+  opacity: 0.2;
 }
 .layer:nth-child(3) {
-  opacity: 0.45;
+  opacity: 0.3;
 }
 .layer:nth-child(4) {
-  opacity: 0.60;
+  opacity: 0.4;
 }
 .layer:nth-child(5) {
-  opacity: 0.75;
+  opacity: 0.5;
 }
 /*medi queries for the background hex's*/
 @media (max-width: 1600px){
@@ -161,9 +160,6 @@ menuitem div:hover{
 }
 /*this media query fixes the menu when the page is sized down, should be mobile*/
 @media (max-width: 680px){
-    main{
-        overflow-y: scroll;
-    }
    header{
         display: block;
        height: 120px;
@@ -195,7 +191,7 @@ menuitem div:hover{
     .beta{
         width: 80px;
         display: inline;
-        margin-top: -40px;
+        margin-top: 20px;
     }
     .beta:hover{
         cursor: pointer;
@@ -215,11 +211,11 @@ menuitem div:hover{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
-        margin-top: -220px;
+        margin-top: 20px;
         transition: all .7s;
     }
     .menu-position{
-        margin-top: -48px;
+        margin-top: -3px;
         opacity: 1;
         display: block;
     }
@@ -238,6 +234,7 @@ menuitem div:hover{
     menuitem div:hover{
         background-color: #ccc;
         border: none;
+        border-radius: 0;
     }
     menuitem + menuitem div:hover{
         border-top: 2px solid #ccc;
@@ -249,7 +246,7 @@ main{
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow-y: scroll;
     z-index: 4;
 }
@@ -259,6 +256,7 @@ main{
     margin: 0 auto;
     max-width: 900px;
     margin-top: 200px;
+    transition: 0.8s;
 }
 .contact-wrapper img{
     width: 100%;
@@ -349,6 +347,50 @@ main{
     box-shadow: 0 -1px 20px 10px #ffffff;
     z-index: 5;
     background-color: #ffffff;
+}
+
+@media (max-width: 680px){
+    p{
+        line-height: 1.4em;
+    }
+
+    h3{
+        line-height: 1.4em;
+    }
+    h4{
+        line-height: 1.4em;
+        font-size: 1.8em;
+    }
+    .contact-wrapper{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        max-width: 900px;
+        margin-top: 100px;
+    }
+    .contact-wrapper img{
+        width: 100%;
+        min-width: 450px;
+        margin: 0 auto;
+    }
+    .copy{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+}
+@media (max-width: 540px){
+    .process-contact-form h2{
+        font-size: 1.8em;
+    }
+    .process-contact-form div{
+        border-radius: 30px;
+        color: #ffffff;
+        border: 2.3px solid #D53531;
+        background-color: #D53531;
+
+    }
+    
 }
 
 

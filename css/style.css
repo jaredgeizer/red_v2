@@ -46,6 +46,17 @@ menuitem div{
     color: inherit;
 }
 
+
+.hidden{
+    display: none !important;
+}
+.show{
+   display: block;
+}
+.white{
+    background-color: #fff;
+}
+
 p{
     font-size: 1em;
 }
