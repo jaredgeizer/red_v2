@@ -9,11 +9,12 @@ header{
     margin: 0 auto;
     margin-top: 20px;
     align-items: center;
-    justify-content: space-between;
-    max-width: 700px;
+    justify-content: flex-start;
+    max-width: 600px;
     z-index: 20;
     position: fixed;
     left: 50px;
+    padding-right: 50px;
     
 }
 .alpha{
@@ -26,17 +27,21 @@ header{
 .alpha:hover{
     transform: scale(1.05);
 }
+.beta{
+    display: none;
+    margin: 0 auto;
+    width: 30%;
+    min-width: 80px;
+    transition: transform 0.5s;
+}
 
 menu{
-    
     margin-top: 0;
     width: 100%;
     max-width: 400px;
     margin: 0;
 }
 menuitem{
-    
-    font-size: 30px;
     width: 100%;
     max-width: 185px;
 }
@@ -45,16 +50,104 @@ menuitem div{
     padding: 10px 15px 10px 15px;
 }
 menuitem div:hover{
-    
     color: #D53531;
     border: 2.3px solid #ccc;
     background-color: #ccc;
     
 }
 .worklink{ 
-    
-    opacity: .4;
+   opacity: .6;
 }
+.homelink{
+    display: none;
+}
+.hover-off{
+    display: none;
+}
+/*this media query fixes the menu when the page is sized down, should be mobile*/
+@media (max-width: 680px){
+   header{
+        display: block;
+       height: 120px;
+        flex-direction: column;
+        width: 90%;
+        max-width: none;
+        margin: 0 auto;
+        margin-top: 0;
+        justify-content: flex-start;
+        z-index: 20;
+        position: fixed;
+        left: 0;
+        font-size: 12px;
+        padding-right: 0;
+       margin-left: 5%;
+       margin-right: 5%;
+    }
+    .hover-off{
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 25;
+        position: fixed;
+        top: 320px;
+}
+    .alpha{
+        display: none;
+    }
+    .beta{
+        width: 80px;
+        display: inline;
+        margin-top: -40px;
+    }
+    .beta:hover{
+        cursor: pointer;
+    }
+    .homelink{
+        display: inline;
+    }
+    .worklink{
+        opacity: 1;
+    }
+    menu{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: none;
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: -220px;
+        transition: all .7s;
+    }
+    .menu-position{
+        margin-top: -48px;
+        opacity: 1;
+        display: block;
+    }
+    menuitem{
+        width: 100%;
+        text-align: center;
+        display: inline;
+    }
+    menuitem div{
+        background-color: #ffffff;
+        border: none;
+    }
+    menuitem + menuitem div{
+        border-top: 2px solid #ccc;
+    }
+    menuitem div:hover{
+        background-color: #ccc;
+        border: none;
+    }
+    menuitem + menuitem div:hover{
+        border-top: 2px solid #ccc;
+    }
+}
+
+
+
 
 
 
@@ -64,7 +157,6 @@ main{
 }
 
 #categories{
-    
     margin: 0;
     position: absolute;
     right: 0;
@@ -90,12 +182,6 @@ main{
     transition: all .4s;
     cursor: pointer;
     opacity: .8;
-}
-h2{
-    
-    margin: 0;
-    font-size: 4em;
-    z-index: 6;
 }
 
 .web{
@@ -204,21 +290,6 @@ h2{
 
 
 
-.white{
-    background-color: #fff;
-}
-p{
-    font-size: 1em;
-}
-h3{
-    
-    margin: 0;
-   font-size: 30px; 
-    font-weight: normal;
-}
-
-
-
 .work-wrapper{
     margin: 0 auto;
     display: block;
@@ -273,6 +344,7 @@ h3{
 .web-example div:nth-child(3){
     margin-top: -70px;
 }
+/*these media queries control the responsiveness of the print page*/
 @media (min-width: 1200px){
     .web-example div:nth-child(3){
     margin-top: 0;
@@ -324,6 +396,7 @@ h3{
     width: 200px;
     padding-bottom: 250px;
 }
+/*these media queries control the responsiveness of the print page*/
 @media (max-width: 1650px){
     .print-example div:nth-child(6){
         margin-top: -50px;
@@ -551,7 +624,7 @@ h3{
 }
 
 .process-lower-logo{
-    margin-top: -100px;
+    margin-top: 0;
     
 }
 .process-lower-logo svg{
@@ -567,39 +640,30 @@ h3{
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
-    min-height: 50vh;
-    padding-top: 5%;
+    min-height: 60vh;
+    margin-top: 50px;
     width: 100%;
+    justify-content: flex-start;
 }
-h4{
-    width: 70%;
+
+.process-contact-form div{
     display: block;
     margin: 0 auto;
-    font-size: 2em;
-    font-weight: 300;
-    letter-spacing: .07em;
-    line-height: 1.7em;
-}
-.process-contact-form div{
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 20%;
     transition: 0.3s ease-in-out;
     border: 2.3px solid white;
-    font-size: 2em;
+    padding: 15px 45px 15px 45px;
    
 }
 .process-contact-form h2{
-    
+    font-size: 2.5em;
 }
 
 .process-contact-form a{
-    width: 50%;
-    max-width: 630px;
-    position: absolute;
-    left: 50%;
-    margin-left: -20%;
-   
+    margin: 0 auto;
+    margin-top: 80px;
+    max-width: 600px;
+    display: block;
+    
 }
 .process-contact-form div:hover{
     border-radius: 30px;
@@ -611,23 +675,7 @@ h4{
     
 }
 
-
-
-
-
-
-
-.hidden{
-    display: none !important;
-}
-.show{
-   display: block;
-}
-
-
-
-
-
+/*these media queries control the responsiveness of the process page*/
 @media (max-width: 1220px){
     .process-results{
         margin-top: 50px;
@@ -644,7 +692,6 @@ h4{
         margin-top: -740px;
     }
 }
-
 @media (max-width: 750px){
     .process-results{
         margin-top: -30px;
@@ -658,10 +705,15 @@ h4{
 
 
 
-
-
-
-
+.hidden{
+    display: none !important;
+}
+.show{
+   display: block;
+}
+.white{
+    background-color: #fff;
+}
 
 
 

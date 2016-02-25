@@ -1,0 +1,371 @@
+body{
+    overflow: hidden;
+    color: #D53531;
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    z-index: -5;
+}
+.leveltwo{
+    -webkit-animation: float 10s linear infinite;
+    margin-left: -10%;
+}
+.levelthree{
+    -webkit-animation: float 6s linear alternate infinite;
+    margin-left: -5%;
+    margin-top: 20px;
+}
+.levelthreethree{
+    -webkit-animation: float 13s linear infinite;
+    margin-top: 50px;
+}
+.levelfour{
+    -webkit-animation: float 8s linear alternate infinite;
+    margin-top: 60px;
+}
+ul{
+    margin: 0;
+    height: 500px;
+}
+li{
+    margin: 0;
+}
+.scene{
+
+    padding: 0;
+}
+.layer{
+    position: absolute;
+}
+.layer img{
+    transition: 0.8s;
+}
+expand-width{}
+
+.layer:nth-child(2) {
+  opacity: 0.30;
+}
+.layer:nth-child(3) {
+  opacity: 0.45;
+}
+.layer:nth-child(4) {
+  opacity: 0.60;
+}
+.layer:nth-child(5) {
+  opacity: 0.75;
+}
+/*medi queries for the background hex's*/
+@media (max-width: 1600px){
+    .levelthreethree{
+        margin-left: -25%;
+    }
+    .levelfour{
+        margin-left: -25%;
+    }
+}
+@media (max-width: 1111px){
+    .levelthreethree{
+        margin-left: -35%;
+    }
+    .levelfour{
+        margin-left: -35%;
+    }
+}
+@media (max-width: 850px){
+   .levelthreethree{
+        margin-left: -45%;
+    }
+    .levelfour{
+        margin-left: -45%;
+    } 
+
+}
+@media (max-width: 500px){
+    .leveltwo{
+        margin-left: -10%;
+    }
+    .levelthree{
+        margin-left: -10%;
+    } 
+}
+
+
+
+
+header{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 600px;
+    z-index: 20;
+    position: fixed;
+    left: 50px;
+    padding-right: 50px;
+    
+}
+.alpha{
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    min-width: 80px;
+    transition: 0.5s;
+}
+.alpha:hover{
+    transform: scale(1.05);
+}
+.beta{
+    display: none;
+    margin: 0 auto;
+    width: 30%;
+    min-width: 80px;
+    transition: transform 0.5s;
+}
+
+menu{
+    margin-top: 0;
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+}
+menuitem{
+    width: 100%;
+    max-width: 185px;
+}
+menuitem div{
+    padding: 10px 15px 10px 15px;
+}
+menuitem div:hover{
+    color: #D53531;
+    border: 2.3px solid #ccc;
+    background-color: #ccc;
+    opacity: 1;
+}
+.contactlink{ 
+   opacity: .6;
+}
+.homelink{
+    display: none;
+}
+.hover-off{
+    display: none;
+}
+/*this media query fixes the menu when the page is sized down, should be mobile*/
+@media (max-width: 680px){
+    main{
+        overflow-y: scroll;
+    }
+   header{
+        display: block;
+       height: 120px;
+        flex-direction: column;
+        width: 90%;
+        max-width: none;
+        margin: 0 auto;
+        margin-top: 0;
+        justify-content: flex-start;
+        z-index: 20;
+        position: fixed;
+        left: 0;
+        font-size: 12px;
+        padding-right: 0;
+       margin-left: 5%;
+       margin-right: 5%;
+    }
+    .hover-off{
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 25;
+        position: fixed;
+        top: 320px;
+}
+    .alpha{
+        display: none;
+    }
+    .beta{
+        width: 80px;
+        display: inline;
+        margin-top: -40px;
+    }
+    .beta:hover{
+        cursor: pointer;
+    }
+    .homelink{
+        display: inline;
+    }
+    .contactlink{
+        opacity: 1;
+    }
+    menu{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: none;
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: -220px;
+        transition: all .7s;
+    }
+    .menu-position{
+        margin-top: -48px;
+        opacity: 1;
+        display: block;
+    }
+    menuitem{
+        width: 100%;
+        text-align: center;
+        display: inline;
+    }
+    menuitem div{
+        background-color: #ffffff;
+        border: none;
+    }
+    menuitem + menuitem div{
+        border-top: 2px solid #ccc;
+    }
+    menuitem div:hover{
+        background-color: #ccc;
+        border: none;
+    }
+    menuitem + menuitem div:hover{
+        border-top: 2px solid #ccc;
+    }
+}
+
+main{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    z-index: 4;
+}
+.contact-wrapper{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    max-width: 900px;
+    margin-top: 200px;
+}
+.contact-wrapper img{
+    width: 100%;
+    margin: 0;
+}
+
+.centered-textbox{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    color: #ffffff;
+}
+.centered-textbox div{
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+    background-color: #D53531;
+    padding: 5px;
+    border: 2px solid #D53531;
+}
+.centered-textbox a{
+    margin: 0 auto;
+    max-width: 200px;
+    display: block;
+}
+.centered-textbox div:hover{
+    color: #D53531;
+    border: 2px solid #D53531;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+
+.process-contact-form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 60vh;
+    margin-top: 50px;
+    width: 100%;
+    justify-content: flex-start;
+}
+.process-contact-form div{
+    
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s ease-in-out;
+    border: 2.3px solid #D53531;
+    padding: 15px 45px 15px 45px;
+   
+}
+.process-contact-form h2{
+    font-size: 2.5em;
+}
+.process-contact-form a{
+    margin: 0 auto;
+    margin-top: 80px;
+    max-width: 600px;
+    display: block;
+}
+.process-contact-form div:hover{
+    border-radius: 30px;
+    color: #ffffff;
+    border: 2.3px solid #D53531;
+    background-color: #D53531;
+    cursor: pointer;
+}
+
+
+.fog{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    box-shadow: 0 40px 80px 50px #ffffff;
+    z-index: 5;
+    background-color: #ffffff;
+}
+.bottom-fog{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    box-shadow: 0 -1px 20px 10px #ffffff;
+    z-index: 5;
+    background-color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+#D53531

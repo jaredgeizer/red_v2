@@ -14,7 +14,7 @@ menu{
     justify-content: space-between;
     margin: 0 auto;
     padding: 0;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 menuitem{
     text-align: center;
@@ -35,17 +35,22 @@ menuitem div{
     padding: 15px 25px 15px 25px;
     transition: 0.3s ease-in-out;
 }
-.worklink{  
+.worklink{ 
+    
 }
 .contactlink{
+    
 }
 .no-style-link{
     text-decoration: none;
     color: inherit;
 }
 
+p{
+    font-size: 1em;
+}
 h1{
-    font-size: 30px;
+    font-size: 2em;
     font-weight: normal;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
@@ -53,20 +58,46 @@ h1{
     -webkit-margin-end: 0;
 }
 h2{
-    font-size: 30px;
+    margin: 0;
+    font-size: 4em;
+    font-weight: normal;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+     z-index: 6;
+}
+h3{
+    margin: 0;
+    font-size: 2em; 
     font-weight: normal;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
 }
-
-
-
-
-
-
-
+h4{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: .07em;
+    line-height: 1.7em;
+}
+h5{
+    margin: 0;
+    font-size: 1.5em; 
+    font-weight: normal;
+}
+h6{
+    font-size: 1em; 
+    font-weight: normal;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
 
 
 
