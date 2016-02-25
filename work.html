@@ -19,33 +19,11 @@
         <header>
             
             <div class="header-logo">
-                <svg class='alpha' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="173.223px" height="200px" viewBox="0 0 173.223 200" style="enable-background:new 0 0 173.223 200;" xml:space="preserve">
+                <a href='index.html'><svg class='alpha' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="173.223px" height="200px" viewBox="0 0 173.223 200" style="enable-background:new 0 0 173.223 200;" xml:space="preserve">
                     <g id="Layer_26">
-                        <polygon style="fill:#ffffff;" points="0,50.001 86.613,0 173.223,50.001 173.223,149.999 86.613,200 0,149.999 	"/>
+                        <polygon style="fill:#ccc;" points="0,50.001 86.613,0 173.223,50.001 173.223,149.999 86.613,200 0,149.999 	"/>
                     </g>
-                </svg>
-
-                <div class="r-e-d-logo">
-                    <a href='index.html'><svg class="hex-R" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="173.223px" height="200px" viewBox="0 0 173.223 200" style="enable-background:new 0 0 173.223 200;" xml:space="preserve">
-                        <g>
-                            <polygon style="fill:#ffffff;" points="86.475,149.999 130.031,174.862 172.991,150.062 129.792,125 173.086,100.035 
-            173.086,50.001 86.475,0.001 -0.113,50.001 -0.113,150 86.475,200 86.475,199.999 	"/>
-                        </g>
-                    </svg></a>
-                    <a href='index.html'><svg class="hex-E" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="173.223px" height="200px" viewBox="0 0 173.223 200" style="enable-background:new 0 0 173.223 200;" xml:space="preserve">
-                        <g id="Layer_1">
-                           <polygon style="fill:#ffffff;" points="87.2,164.723 26.107,129.451 26.107,114.722 87.202,149.999 87.2,124.999 26.107,89.723 
-            26.107,64.723 87.2,100 98.663,93.381 173.792,50 87.202,0 0.591,50 0.591,64.723 0.591,75 0.591,100 0.591,114.723 0.591,149.999 
-            87.202,200 173.792,149.999 173.792,114.723 98.663,158.104 	"/>
-                        </g>
-                    </svg></a>
-                    <a href='index.html'><svg class="hex-D" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="173.223px" height="200px" viewBox="0 0 173.223 200" style="enable-background:new 0 0 173.223 200;" xml:space="preserve">
-                        <g id="Layer_1">
-                           <path style="fill:#ffffff;" d="M86.677,0.001l-86.61,50V150l86.61,50l86.59-50v-14.722v-10.277v-25V85.278V50.001L86.677,0.001z
-             M147.771,135.278l-61.095,34.829V35.276l61.095,35.273V135.278z"/>
-                        </g>
-                    </svg></a>
-                </div>
+                </svg></a>
             </div>
         
             <menu>
@@ -75,16 +53,41 @@
                 </div>
             </div>
             
+            
             <div id="viewport"></div>
             
             <div class="back-button hidden">
                 <h2>back</h2>
             </div>
-            <div class='web-container hidden'></div>
-            <div class='print-container hidden'></div>
+            
 
         </main>
+        <div class='web-container hidden'>
+            <div class="work-wrapper">
+                <h2>web</h2>
+                <div class="work-example web-example">
+                    <div class="web-thumb1"></div>
+                    <div class="web-thumb2"></div>
+                    <div class="web-thumb3"></div>
+                </div>
+            </div>
+        </div>
+        <div class='print-container hidden'>
+            <div class="work-wrapper">
+                <h2>print</h2>
+                <div class="work-example print-example">
+                    <div class="print-thumb1"></div>
+                    <div class="print-thumb2"></div>
+                    <div class="print-thumb3"></div>
+                    <div class="print-thumb4"></div>
+                    <div class="print-thumb5"></div>
+                    <div class="print-thumb6"></div>
+                </div>
+            </div>
+        </div>
         <div class='process-container hidden'>
+            
+            
             <div class="centered-textbox textbox">
                 <h3> hello this is where I would have words</h3>
             </div>
@@ -162,8 +165,9 @@
         
         
         <script>
-            var w = window.innerWidth;
-            var h = window.innerHeight;
+            //var w = window.innerWidth;
+            //var h = window.innerHeight;
+            
             
             
             $(document).ready(function(){
@@ -172,7 +176,6 @@
             
             $(window).resize(function(){
                 window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
-                
             });
             
             
@@ -181,9 +184,7 @@
                 $('.back-button').removeClass('hidden');
                 $('.back-button').addClass('back-from-web');
                 $('.web-container').addClass('show');
-                $('.hexagon div').addClass('hidden');
-                $('.print').addClass('hidden');
-                $('.process').addClass('hidden');
+                $('.hexagon').addClass('hidden');
                 $('#categories').css('right', 830);
                 window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
             });
@@ -192,16 +193,13 @@
                 $('.back-button').addClass('hidden');
                 $('.back-button').removeClass('back-from-web');
                 $('.web-container').removeClass('show');
-                $('.hexagon div').removeClass('hidden');
+                $('.hexagon').removeClass('hidden');
                 $('#categories').css('right', 0);
                 window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
                 $('.print-container').addClass('hidden');
                 $('.back-button').removeClass('back-from-print');
                 $('.print-container').removeClass('show');
                 $('#categories').css('top', 0);
-                $('.print').removeClass('hidden');
-                $('.process').removeClass('hidden');
-                $('.web').removeClass('hidden');
                 $('#categories').css('left', 'auto');
             });
             
@@ -211,9 +209,7 @@
                 $('.back-button').removeClass('hidden');
                 $('.back-button').addClass('back-from-print');
                 $('.print-container').addClass('show');
-                $('.hexagon div').addClass('hidden');
-                $('.web').addClass('hidden');
-                $('.process').addClass('hidden');
+                $('.hexagon').addClass('hidden');
                 $('#categories').css('left', -910);
                 $('#categories').css('top', 30);
                 window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
@@ -221,9 +217,7 @@
             $(document).on('click', '#process', function(){
                 $('.process-container').removeClass('hidden');
                 $('.process-container').addClass('show');
-                $('.hexagon div').addClass('hidden');
-                $('.web').addClass('hidden');
-                $('.print').addClass('hidden');
+                $('.hexagon').addClass('hidden');
                 $('body').css('overflowY','scroll');
                 $('header').css('background-color','#D53531');
                 $('body').css('background-color','#D53531');

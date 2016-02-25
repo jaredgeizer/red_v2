@@ -85,14 +85,90 @@ expand-width{}
     top: 250px;
     z-index: 5;
 }
+
 .alpha{
     display: block;
     margin: 0 auto;
-    animation: alpha-shrink 12s infinite;
-    -webkit-animation: alpha-shrink 12s infinite;
+    animation: alpha-shrink 12s 1;
+    -webkit-animation: alpha-shrink 12s 1;
     width: 105%;
 }
 
+.r-e-d-logo{ 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: -200px;
+}
+.r-e-d-logo svg + svg{
+    margin-left: 10px;
+}
+.r-e-d-logo svg{
+    width: 100%;
+    max-width: 175px;
+}
+
+.hex-R{
+    margin: 0;
+    position: relative;
+    animation: R-extend 12s 1;
+    -webkit-animation: R-extend 12s 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+.hex-E{}
+.hex-D{
+    position: relative;
+    animation: D-extend 12s 1;
+    -webkit-animation: D-extend 12s 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+
+@keyframes R-extend {
+    0%{transform: translateX(103%);}
+    25%{transform: translateX(0);}
+    50%{transform: translateX(0);}
+    75%{transform: translateX(103%);}
+    100%{transform: translateX(103%);}
+}
+@keyframes D-extend {
+    0%{transform: translateX(-107%);}
+    25%{transform: translateX(0);}
+    50%{transform: translateX(0);}
+    75%{transform: translateX(-107%);}
+    100%{transform: translateX(-107%);}
+}
+@keyframes alpha-shrink {
+    0%{width: 80%; transform: translateY(0);}
+    10%{width: 0%; transform: translateY(-5%);}
+    60%{width: 0%; transform: translateY(-5%);}
+    65%{width: 80%; transform: translateY(0);}
+    100%{width: 80%;transform: translateY(0);}
+}
+@-webkit-keyframes R-extend {
+    0%{transform: translateX(107%);}
+    25%{transform: translateX(0);}
+    50%{transform: translateX(0);}
+    75%{transform: translateX(107%);}
+    100%{transform: translateX(107%);}
+}
+@-webkit-keyframes D-extend {
+    0%{transform: translateX(-107%);}
+    25%{transform: translateX(0);}
+    50%{transform: translateX(0);}
+    75%{transform: translateX(-107%);}
+    100%{transform: translateX(-107%);}
+}
+@-webkit-keyframes alpha-shrink {
+    0%{width: 80%; transform: translateY(0);}
+    10%{width: 0%; transform: translateY(-5%);}
+    60%{width: 0%; transform: translateY(-5%);}
+    65%{width: 80%; transform: translateY(0);}
+    100%{width: 80%;transform: translateY(0);}
+}
 
 
 
