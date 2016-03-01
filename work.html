@@ -77,9 +77,20 @@
             <div class="work-wrapper">
                 <h2>web</h2>
                 <div class="work-example web-example">
-                    <div class="web-thumb1"></div>
-                    <div class="web-thumb2"></div>
-                    <div class="web-thumb3"></div>
+                    <div class="web-thumb1" data-popup-target="#cell1"></div>
+                    <div class="web-thumb2" data-popup-target="#cell2"></div>
+                    <div class="web-thumb3" data-popup-target="#cell3"></div>
+                </div>
+                <div class="work-overlay hidden">
+                    <div class="close"></div>
+                    <div class="work-container">
+                        <div class="web-large1" id="cell1"><!--for some reason the content under this div doesnt show up when the respective thu8mb is selected-->
+                            <p>um hello are you there</p>
+                        </div>
+                        <div class="web-large2" id="cell2"></div>
+                        <div class="web-large3" id="cell3"></div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -170,147 +181,9 @@
         
         
         
-    
+        <script src="js/work-javascript.js"></script>
         
-        
-        <script>
-            //var w = window.innerWidth;
-            //var h = window.innerHeight;
-            
-            
-            
-            $(document).ready(function(){
-                window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
-            });
-            
-            $(window).resize(function(){
-                window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
-            });
-            
-            $(document).on('click', '.beta', function(){
-                $('menu').toggleClass('menu-position');
-                $('.hover-off').toggleClass('hidden');
-            });
-            $(document).on('click', '.hover-off', function(){
-                $('menu').removeClass('menu-position');
-                $('.hover-off').addClass('hidden');
-            });
-            $('.hover-off').hover(function(){
-                $('menu').removeClass('menu-position');
-                $('.hover-off').addClass('hidden');
-            });
-            
-            $(document).on('click', '#web', function(){
-                $('.web-container').removeClass('hidden');
-                $('.back-button').removeClass('hidden');
-                $('.back-button').addClass('back-from-web');
-                $('.web-container').addClass('show');
-                $('#categories').addClass('hidden');
-                $('.web-extension').addClass('hidden');
-                window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
-            });
-            $(document).on('click', '.web > h2', function(){
-                $('.web-container').removeClass('hidden');
-                $('.back-button').removeClass('hidden');
-                $('.back-button').addClass('back-from-web');
-                $('.web-container').addClass('show');
-                $('#categories').addClass('hidden');
-                $('.web-extension').addClass('hidden');
-                window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
-            });
-            $(document).on('click', '.web-extension', function(){
-                $('.web-container').removeClass('hidden');
-                $('.back-button').removeClass('hidden');
-                $('.back-button').addClass('back-from-web');
-                $('.web-container').addClass('show');
-                $('#categories').addClass('hidden');
-                $('.web-extension').addClass('hidden');
-                window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
-            });
-            $('.web > h2').hover(function(){
-                $('.web > div').toggleClass("active");
-                $('.web-extension').toggleClass("web-extension-active");
-            });
-            $('#web').hover(function(){
-                $('.web-extension').toggleClass("web-extension-active");
-            });
-            $('.web-extension').hover(function(){
-                $('.web > div').toggleClass("active");
-                $('.web-extension').toggleClass("web-extension-active");
-            });
-            
-            $(document).on('click', '#print', function(){
-                $('.print-container').removeClass('hidden');
-                $('.back-button').removeClass('hidden');
-                $('.back-button').addClass('back-from-print');
-                $('.print-container').addClass('show');
-                $('#categories').addClass('hidden');
-                $('.web-extension').addClass('hidden');
-                window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
-            });
-            $(document).on('click', '.print > h2', function(){
-                $('.print-container').removeClass('hidden');
-                $('.back-button').removeClass('hidden');
-                $('.back-button').addClass('back-from-print');
-                $('.print-container').addClass('show');
-                $('#categories').addClass('hidden');
-                $('.web-extension').addClass('hidden');
-                window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
-            });
-            $('.print > h2').hover(function(){
-                $('.print > div').toggleClass("active");
-            });
-            
-            
-            $(document).on('click', '#process', function(){
-                $('.process-container').removeClass('hidden');
-                $('.process-container').addClass('show');
-                $('#categories').addClass('hidden');
-                $('.web-extension').addClass('hidden');
-                $('body').css('overflowY','scroll');
-                $('header').css('background-color','#D53531');
-                $('body').css('background-color','#D53531');
-                $("#viewport").addClass('hidden');
-            });
-            $(document).on('click', '.process > h2', function(){
-                $('.process-container').removeClass('hidden');
-                $('.process-container').addClass('show');
-                $('#categories').addClass('hidden');
-                $('.web-extension').addClass('hidden');
-                $('body').css('overflowY','scroll');
-                $('header').css('background-color','#D53531');
-                $('body').css('background-color','#D53531');
-                $("#viewport").addClass('hidden');
-            });
-            $('.process > h2').hover(function(){
-                $('.process > div').toggleClass("active");
-            });
-            
-            $(document).on('click', '.back-button', function(){
-                $('.web-container').addClass('hidden');
-                $('.back-button').addClass('hidden');
-                $('.back-button').removeClass('back-from-web');
-                $('.web-container').removeClass('show');
-                $('#categories').removeClass('hidden');
-                $('.web-extension').removeClass('hidden');
-                window.scroll($("#viewport").offset().left, $("#viewport").offset().top);
-                $('.print-container').addClass('hidden');
-                $('.back-button').removeClass('back-from-print');
-                $('.print-container').removeClass('show');
-            });
-            
-            
-           
             
         
-	   </script> 
-    
-
-
-
-
-
-
-    
     </body> 
 </html>

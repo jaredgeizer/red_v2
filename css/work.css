@@ -428,6 +428,7 @@ main{
     padding-top: 150px;
     overflow-y: scroll;
     height: 86vh;
+  background-color: #D53531;
 }
 .work-wrapper h2{
     text-align: center;
@@ -463,7 +464,6 @@ main{
 
 
 .web-container{
-    
     width: 100vw;
     height: 100vh;
     background-color: #D53531;
@@ -477,6 +477,47 @@ main{
     width: 300px;
     padding-bottom: 350px;
 }
+
+.work-overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    z-index: 50;
+}
+
+.work-container{
+    width: 80%;
+    background-color: white;
+    min-height: 90vh;
+    z-index: 51;
+    position: absolute;
+    margin-left: 10%;
+    top: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.work-container div{
+    display: none;
+}
+.close{
+    position: absolute;
+    margin: 0;
+    height: 100%;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #ccc;
+    opacity: .5;
+}
+.close:hover{
+    background-color: #ccc;
+}
+
+
 .web-example div:nth-child(3){
     margin-top: -70px;
 }
@@ -516,6 +557,17 @@ main{
 }
 .web-thumb3{
     background-image: url(http://lorempixel.com/300/350)
+}
+
+
+.web-large1{
+   
+}
+.web-large2{
+   
+}
+.web-large3{
+   
 }
 
 
