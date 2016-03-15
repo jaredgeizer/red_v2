@@ -51,10 +51,22 @@ menuitem div{
     display: none !important;
 }
 .show{
-   display: block;
+   display: block !important;
+    animation: reveal .8s 1;
+    opacity: 1;
+}
+.show-flex{
+    display: flex !important;
+    animation: reveal .8s 1;
+    opacity: 1;
 }
 .white{
     background-color: #fff;
+}
+@keyframes reveal{
+  0%{opacity: 0; transform: translateY(10px)}
+  100%{opacity:1; transform: translateY(0)}
+  
 }
 
 p{

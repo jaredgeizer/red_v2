@@ -159,6 +159,7 @@ main{
     margin: 0;
     position: absolute;
     right: 0;
+    top: 0;
     width: 100%;
     max-width: 1400px;
     background-color: #ffffff;
@@ -479,40 +480,44 @@ main{
 }
 
 .work-overlay{
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     margin: 0;
     height: 100%;
-    z-index: 50;
+    color: #D53531;
+    overflow-y: scroll;
+    display: flex;
 }
 
 .work-container{
+    margin-top: 100px;
     width: 80%;
     background-color: white;
-    min-height: 90vh;
-    z-index: 51;
+    min-height: 80vh;
+    z-index: 50;
     position: absolute;
     margin-left: 10%;
-    top: 100px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    max-width: 1200px;
+    
 }
-.work-container div{
+.work-container > div{
     display: none;
+    justify-content: space-between;
 }
 .close{
-    position: absolute;
-    margin: 0;
-    height: 100%;
-    z-index: 50;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background-color: #ccc;
-    opacity: .5;
+  position: absolute;
+  margin: 0;
+  height: 100%;
+  z-index: 49;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #ccc;
+  opacity: .5;
 }
+
 .close:hover{
     background-color: #ccc;
 }
@@ -522,6 +527,13 @@ main{
     margin-top: -70px;
 }
 /*these media queries control the responsiveness of the web page*/
+@media (min-width: 1500px){
+    .work-container{
+        margin-left: -650px;
+        left: 50%;
+
+    }
+}
 @media (min-width: 1200px){
     .web-example div:nth-child(3){
     margin-top: 0;
@@ -548,26 +560,42 @@ main{
 
 
 
-.web-thumb1{
-    
-    background-image: url(http://lorempixel.com/300/350)
-}
-.web-thumb2{
-    background-image: url(http://lorempixel.com/300/350)
-}
-.web-thumb3{
-    background-image: url(http://lorempixel.com/300/350)
-}
+
 
 
 .web-large1{
-   
 }
 .web-large2{
-   
 }
 .web-large3{
-   
+}
+
+.detail-images{
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.detail-images img{
+    width: 100%;
+    max-height: 100vh;
+    max-width: 800px;
+}
+.detail-text{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    max-width: 400px;
+    
+}
+.detail-text p+p+p{
+    margin-top: 50px;
+    border-top: 1px solid #D53531;
+    padding-top: 10px;
+}
+.detail-text ul{
+    -webkit-padding-start: 30px;
+    font-size: .88em
 }
 
 
@@ -762,24 +790,34 @@ main{
     }
 }
 
+/*-----------------here are all the images for the thumbnails--------------*/
+.web-thumb1{
+    background-image: url(http://lorempixel.com/300/350)
+}
+.web-thumb2{
+    background-image: url(http://lorempixel.com/300/350)
+}
+.web-thumb3{
+    background-image: url(http://lorempixel.com/300/350)
+}
 
 .print-thumb1{
-    background-image: url(http://lorempixel.com/300/350)
+    background-image: url(http://www.geizerdesign.com/img/blackfish/thumb.jpg)
 }
 .print-thumb2{
-    background-image: url(http://lorempixel.com/300/350)
+    background-image: url(http://www.geizerdesign.com/img/ebola/thumb.jpg)
 }
 .print-thumb3{
-    background-image: url(http://lorempixel.com/300/350)
+    background-image: url(http://www.geizerdesign.com/img/fall_dance/thumb.jpg)
 }
 .print-thumb4{
-    background-image: url(http://lorempixel.com/300/350)
+    background-image: url(http://www.geizerdesign.com/img/far_away/thumb.jpg)
 }
 .print-thumb5{
-    background-image: url(http://lorempixel.com/300/350)
+    background-image: url(http://www.geizerdesign.com/img/spring_dance/thumb.jpg)
 }
 .print-thumb6{
-    background-image: url(http://lorempixel.com/300/350)
+    background-image: url(http://www.geizerdesign.com/img/wine_tasting/thumb.jpg)
 }
 
 
@@ -958,6 +996,26 @@ main{
     
 }
 
+#other-sites{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    border: 0px solid;
+    padding: 0;
+}
+#other-sites a{
+    width: 200px;
+}
+#other-sites: hover{
+    border-radius: 30px;
+    color: #D53531;
+    border: 0;
+    background-color: rgba(255,255,255, .0);
+    cursor: ;
+}
+
+
 /*these media queries control the responsiveness of the process page*/
 @media (max-width: 1220px){
     .process-results{
@@ -1057,6 +1115,22 @@ main{
 }
 
 
+
+@media (max-height: 900px){
+    #categories{
+        top: -100px;
+    }
+}
+@media (max-height: 800px){
+    #categories{
+        top: -200px;
+    }
+}
+@media (max-height: 700px){
+    #categories{
+        top: -300px;
+    }
+}
 
 
 
