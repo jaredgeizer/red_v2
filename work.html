@@ -7,8 +7,10 @@
         <!--<link rel="stylesheet" href="css/boilerplate.css">-->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/work.css">
-        <script language="javascript" type="text/javascript" src="js/java.js"></script>
+        
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
+        <script language="javascript" type="text/javascript" src="js/javascript.js"></script>
+        <script language="javascript" type="text/javascript" src="js/work-javascript.js"></script>
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href='https://fonts.googleapis.com/css?family=Exo+2:400,500,600,700,800' rel='stylesheet' type='text/css'>
@@ -50,106 +52,17 @@
         <div class="hover-off hidden"></div>
 
         <main>
-            <div id="categories">
-                <div class="hexagon web">
-                    <h2>web</h2>
-                    <div id="web"></div>
-                </div>
-                <div class="hexagon print">
-                    <h2>print</h2>
-                    <div id="print"></div>
-                </div>
-                <div class="hexagon process">
-                    <h2>process</h2>
-                    <div id="process"></div>
-                </div>
-            </div>
             
+            <div class="process">
+                <h2>process</h2>
+                <div id="process"></div>
+            </div>
             <div id="viewport"></div>
-            <div class="web-extension"></div>
             
-            <div class="back-button hidden">
-                <h2>back</h2>
-            </div>
-        </main>
-
-        <div class='web-container hidden'>
+    
+            <div class='print-container'>
+                
             <div class="work-wrapper">
-                <h2>web</h2>
-                <div class="work-example web-example">
-                    <div class="web-thumb1" data-popup-target="#cell1"></div>
-                    <div class="web-thumb2" data-popup-target="#cell2"></div>
-                    <div class="web-thumb3" data-popup-target="#cell3"></div>
-                </div>
-                <div class="work-overlay hidden">
-                    <div class="close"></div>
-                    <div class="work-container">
-                        <div class="web-large1" id="cell1">
-                            <div class="detail-images">
-                                <img src="http://lorempixel.com/600/800">
-                                <img src="http://lorempixel.com/600/800">
-                                <img src="http://lorempixel.com/600/800">
-                                <img src="http://lorempixel.com/600/800">
-                            </div>
-                            <div class="detail-text">
-                                <h3>Title</h3>
-                                <p><em>completion date</em></p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-                                <p><b>Tools used</b></p>
-                                <ul>
-                                    <li>Photoshop</li>
-                                    <li>Illustrator</li>
-                                    <li>Indesign</li>
-                                    <li>Common Sense</li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                        <div class="web-large2" id="cell2">
-                            <div class="detail-images">
-                                <img src="http://lorempixel.com/600/800">
-                                <img src="http://lorempixel.com/600/800">
-                            </div>
-                            <div class="detail-text">
-                                <h3>Title</h3>
-                                <p><em>completion date</em></p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-                                <p><b>Tools used</b></p>
-                                <ul>
-                                    <li>Photoshop</li>
-                                    <li>Illustrator</li>
-                                    <li>Indesign</li>
-                                    <li>Common Sense</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="web-large3" id="cell3">
-                            <div class="detail-images">
-                                <img src="http://lorempixel.com/600/800">
-                                <img src="http://lorempixel.com/600/800">
-                                <img src="http://lorempixel.com/600/800">
-                            </div>
-                            <div class="detail-text">
-                                <h3>Title</h3>
-                                <p><em>completion date</em></p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-                                <p><b>Tools used</b></p>
-                                <ul>
-                                    <li>Photoshop</li>
-                                    <li>Illustrator</li>
-                                    <li>Indesign</li>
-                                    <li>Common Sense</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class='print-container hidden'>
-            <div class="work-wrapper">
-                <h2>print</h2>
                 <div class="work-example print-example">
                     <div class="print-thumb1" data-popup-target="#cell11"></div>
                     <div class="print-thumb2" data-popup-target="#cell12"></div>
@@ -157,6 +70,9 @@
                     <div class="print-thumb4" data-popup-target="#cell14"></div>
                     <div class="print-thumb5" data-popup-target="#cell15"></div>
                     <div class="print-thumb6" data-popup-target="#cell16"></div>
+                    <div class="print-thumb7" data-popup-target="#cell17"></div>
+                    <div class="print-thumb8" data-popup-target="#cell18"></div>
+                    <div class="print-thumb9" data-popup-target="#cell19"></div>
                 </div>
                 <div class="work-overlay hidden">
                     <div class="close"></div>
@@ -175,7 +91,7 @@
                             <div class="detail-text">
                                 <h3>Blackfish</h3>
                                 <p><em>2013</em></p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                <p>Personal project working on illustration styles for a choice movie poster. Experimenting with shapes and their relationship to typography.</p>
                                 <p><b>Tools used</b></p>
                                 <ul>
                                     
@@ -187,6 +103,7 @@
                             
                         </div>
                         <div class="print-large2" id="cell12">
+                            
                             <div class="detail-images">
                                 <img src="http://www.geizerdesign.com/img/ebola/large-poster-1.jpg">
                                 <img src="http://www.geizerdesign.com/img/ebola/large-poster-2.jpg">
@@ -194,19 +111,21 @@
                                 <img src="http://www.geizerdesign.com/img/ebola/large-poster-4.jpg">
                                 <img src="http://www.geizerdesign.com/img/ebola/large-poster-7.jpg">
                                 <img src="http://www.geizerdesign.com/img/ebola/large-poster-8.jpg">
+                                <img src="http://www.geizerdesign.com/img/ebola/large-poster-10.jpg">
                                 <img src="http://www.geizerdesign.com/img/ebola/large-poster-9.jpg">
                                 
                             </div>
                             <div class="detail-text">
                                 <h3>Ebola vs the Flu</h3>
                                 <p><em>2015</em></p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                <p>Project for school organization focused on information literacy. Project required research and data organization as well as visualization. Large-scale poster was displayed alongside other posters for the same organization.</p>
                                 <p><b>Tools used</b></p>
                                 <ul>
                                     <li>Photoshop</li>
                                     <li>Illustrator</li>
                                     
                                     <li>Research</li>
+                                    <li>Microsoft Excel</li>
                                 </ul>
                             </div>
                         </div>
@@ -225,7 +144,7 @@
                             <div class="detail-text">
                                 <h3>Fall Dance Poster</h3>
                                 <p><em>2013</em></p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                <p>Assignment for school that simulated a client requested project. Involved exploration of other photo manipulation artist style and changing it to better suit the project. Poster was then presented to client along with other student work. My poster ended up being runner up for the client’s choice.</p>
                                 <p><b>Tools used</b></p>
                                 <ul>
                                     <li>Photoshop</li>
@@ -247,7 +166,7 @@
                             <div class="detail-text">
                                 <h3>Far Away Infographic</h3>
                                 <p><em>2013</em></p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                <p>Project for school that required personal data gathering and presenting it in a visual story like manner. Timeline of data spans one school semester and includes various personal sources. End product used its size as part of conveying the amount of information.</p>
                                 <p><b>Tools used</b></p>
                                 <ul>
                                     
@@ -271,7 +190,7 @@
                             <div class="detail-text">
                                 <h3>Spring Dance Poster</h3>
                                 <p><em>2015</em></p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                <p>Assignment for school that simulated a client requested project. A variety of styles were explored. Poster was then presented to client along with other student work. Poster ended up being selected by client for the event.</p>
                                 <p><b>Tools used</b></p>
                                 <ul>
                                     <li>Photoshop</li>
@@ -282,6 +201,66 @@
                             </div>
                         </div>
                         <div class="print-large6" id="cell16">
+                            <div class="detail-images">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-1.jpg">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-2.jpg">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-3.jpg">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-4.jpg">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-5.jpg">
+                            </div>
+                            <div class="detail-text">
+                                <h3>Wine Tasting Under the Stars Poster</h3>
+                                <p><em>2014</em></p>
+                                <p>Project for local event requested poster. Texture and Illustration were used as well as typographic orientation.</p>
+                                <p><b>Tools used</b></p>
+                                <ul>
+                                    <li>Photoshop</li>
+                                    <li>Illustrator</li>
+                                    <li>Indesign</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="print-large7" id="cell17">
+                            <div class="detail-images">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-1.jpg">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-2.jpg">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-3.jpg">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-4.jpg">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-5.jpg">
+                            </div>
+                            <div class="detail-text">
+                                <h3>Wine Tasting Under the Stars Poster</h3>
+                                <p><em>2014</em></p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                <p><b>Tools used</b></p>
+                                <ul>
+                                    <li>Photoshop</li>
+                                    <li>Illustrator</li>
+                                    <li>Indesign</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="print-large8" id="cell18">
+                            <div class="detail-images">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-1.jpg">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-2.jpg">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-3.jpg">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-4.jpg">
+                                <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-5.jpg">
+                            </div>
+                            <div class="detail-text">
+                                <h3>Wine Tasting Under the Stars Poster</h3>
+                                <p><em>2014</em></p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                <p><b>Tools used</b></p>
+                                <ul>
+                                    <li>Photoshop</li>
+                                    <li>Illustrator</li>
+                                    <li>Indesign</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="print-large9" id="cell19">
                             <div class="detail-images">
                                 <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-1.jpg">
                                 <img src="http://www.geizerdesign.com/img/wine_tasting/large-poster-2.jpg">
@@ -306,6 +285,9 @@
                 </div>
             </div>
         </div>
+            <div class="bottom-fog"></div>
+        </main>
+
         <div class='process-container hidden'>
             
             
@@ -372,7 +354,6 @@
                     </a>
                 <div id="other-sites">
                     <a href="https://www.behance.net/MyNameIsGeizer" target="_blank"><img src='http://lorempixel.com/200/200'></a>
-                    <a href="https://www.behance.net/MyNameIsGeizer" target="_blank"><img src='http://lorempixel.com/200/200'></a>
                 </div>
             </div>
             
@@ -381,10 +362,6 @@
             
         </div>
         
-        
-        
-        
-        <script src="js/work-javascript.js"></script>
         
             
         
